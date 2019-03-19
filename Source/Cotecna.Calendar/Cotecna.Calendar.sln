@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cotecna.Calendar.View", "Cotecna.Calendar.View\Cotecna.Calendar.View.csproj", "{6C9F5E99-3AE6-449E-B415-017C5597934E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cotecna.Calendar.Model", "..\Cotecna.Calendar.Model\Cotecna.Calendar.Model.csproj", "{443F4C96-0EF9-4D97-B6A4-10154502A7FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cotecna.Calendar.Test", "..\Cotecna.Calendar.Test\Cotecna.Calendar.Test.csproj", "{35C651A6-3343-4D88-A467-A75F6A2740E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C9F5E99-3AE6-449E-B415-017C5597934E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C9F5E99-3AE6-449E-B415-017C5597934E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C9F5E99-3AE6-449E-B415-017C5597934E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C9F5E99-3AE6-449E-B415-017C5597934E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{443F4C96-0EF9-4D97-B6A4-10154502A7FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{443F4C96-0EF9-4D97-B6A4-10154502A7FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{443F4C96-0EF9-4D97-B6A4-10154502A7FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{443F4C96-0EF9-4D97-B6A4-10154502A7FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35C651A6-3343-4D88-A467-A75F6A2740E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35C651A6-3343-4D88-A467-A75F6A2740E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35C651A6-3343-4D88-A467-A75F6A2740E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35C651A6-3343-4D88-A467-A75F6A2740E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {240A4CB7-F653-4C42-9EA6-8EE3286B94F5}
+	EndGlobalSection
+EndGlobal
