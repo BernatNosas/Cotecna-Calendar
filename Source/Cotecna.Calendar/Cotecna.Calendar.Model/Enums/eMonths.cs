@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Cotecna.Calendar.Model.Enums
+﻿namespace Cotecna.Calendar.Model.Enums
 {
+    /// <summary>
+    /// List of avalible months
+    /// </summary>
     public enum eMonths
     {
         January = 1,
