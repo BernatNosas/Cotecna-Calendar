@@ -3,6 +3,9 @@ using System.Globalization;
 
 namespace Cotecna.Calendar.Model.Days
 {
+    /// <summary>
+    /// Class who models a day of calendar
+    /// </summary>
     public class CalendarDay
     {
 
@@ -16,6 +19,12 @@ namespace Cotecna.Calendar.Model.Days
 
         #region constructors
 
+        /// <summary>
+        /// Class constructor
+        /// </summary>
+        /// <param name="d">day number of the instance</param>
+        /// <param name="m">month number of the instance</param>
+        /// <param name="y">year number of the instance</param>
         public CalendarDay(int d,int m, int y)
         {
             this.currentDate = new DateTime(y, m, d);
