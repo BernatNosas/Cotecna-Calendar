@@ -7,6 +7,9 @@ using System.Linq;
 
 namespace Cotecna.Calendar.View.ViewModel
 {
+    /// <summary>
+    /// Main View Model
+    /// </summary>
     public class CalendarVM
     {
 
@@ -27,12 +30,14 @@ namespace Cotecna.Calendar.View.ViewModel
 
         #region constructors
 
+        /// <summary>
+        /// Class default constructor
+        /// </summary>
         public CalendarVM()
         {
             this.Month = (eMonths)DateTime.Now.Month;      
             this.SetAvalibleYears();
-            this.year = DateTime.Now.Year;
-         
+            this.year = DateTime.Now.Year;      
         }
 
         #endregion
