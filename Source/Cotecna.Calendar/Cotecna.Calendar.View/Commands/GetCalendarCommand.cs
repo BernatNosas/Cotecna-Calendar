@@ -71,10 +71,7 @@ namespace Cotecna.Calendar.View.Commands
             }
             if (deleteTexts.Any())
             {
-                foreach(UIElement de in deleteTexts)
-                {
-                    g.Children.Remove(de);
-                }
+                deleteTexts.ForEach(d => g.Children.Remove(d)); 
             }
         }
 
