@@ -5,9 +5,7 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cotecna.Calendar.View", "Cotecna.Calendar.View\Cotecna.Calendar.View.csproj", "{6C9F5E99-3AE6-449E-B415-017C5597934E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cotecna.Calendar.Model", "..\Cotecna.Calendar.Model\Cotecna.Calendar.Model.csproj", "{443F4C96-0EF9-4D97-B6A4-10154502A7FD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cotecna.Calendar.Test", "..\Cotecna.Calendar.Test\Cotecna.Calendar.Test.csproj", "{35C651A6-3343-4D88-A467-A75F6A2740E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cotecna.Calendar.Model", "Cotecna.Calendar.Model\Cotecna.Calendar.Model.csproj", "{443F4C96-0EF9-4D97-B6A4-10154502A7FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
