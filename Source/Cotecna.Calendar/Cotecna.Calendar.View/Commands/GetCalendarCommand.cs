@@ -10,9 +10,23 @@ using System.Windows.Media;
 
 namespace Cotecna.Calendar.View.Commands
 {
+    /// <summary>
+    /// Command who gets the desired month
+    /// </summary>
     public class GetCalendarCommand : ICommand
     {
-        
+
+        #region constants
+
+        private const int SUNDAY_COLUMN_NUMBER = 6;
+        private const int DAYS_NUMBER_TO_SUBSTRACT = 1;
+        private const int MIN_COLUMN_NUMBER = 0;
+        private const int MAX_COLUMN_NUMBER = 6;
+        private const int MIN_ROW_NUMBER = 1;
+        private const int MAX_ROW_NUMBER = 6;
+
+        #endregion
+
         #region fields
 
         private CalendarVM viewModel;
@@ -22,6 +36,10 @@ namespace Cotecna.Calendar.View.Commands
 
         #region constructors
 
+        /// <summary>
+        /// Class constructor
+        /// </summary>
+        /// <param name="c">Instance of the main ViewModel.<see cref="CalendarVM"/></param>
         public GetCalendarCommand(CalendarVM c)
         {
             this.viewModel = c;
@@ -34,9 +52,9 @@ namespace Cotecna.Calendar.View.Commands
         private void ClearCurrentCalendar(Grid g)
         {
             List<UIElement> deleteTexts = new List<UIElement>();
-            for(int i = 0; i <= 6; i++)
+            for(int i = MIN_COLUMN_NUMBER; i <= MAX_COLUMN_NUMBER; i++)
             {
-                for(int j = 1; j<=6; j++)
+                for(int j = MIN_ROW_NUMBER; j<= MAX_ROW_NUMBER; j++)
                 {
                    IEnumerable<UIElement> elements = g.Children.Cast<UIElement>().
                         Where(e => Grid.GetRow(e) == j &&
@@ -129,11 +147,11 @@ namespace Cotecna.Calendar.View.Commands
         {
             if(cale.CurrentDay == DayOfWeek.Sunday)
             {
-                return 6;
+                return SUNDAY_COLUMN_NUMBER;
             }
             else
             {
-                return (int)cale.CurrentDay - 1 ;
+                return (int)cale.CurrentDay - DAYS_NUMBER_TO_SUBSTRACT;
             }
         }
 
