@@ -9,6 +9,18 @@ namespace Cotecna.Calendar.Model.Forecast
 {
     internal class WeatherForecast
     {
+        #region constants
+
+        private const string FORECAST_URL_CITY_PARAMETER_KEY = "q";
+        private const string FORECAST_URL_CITY_PARAMETER_VALUE = "Barcelona";
+        private const string FORECAST_URL_LOGIN_PARAMETER_KEY = "appid";
+        private const string FORECAST_URL_LOGIN_PARAMETER_VALUE = "ab00f1f217b4c97b2f2ecfab05190206";
+        private const string FORECAST_URL_WEB_API = "https://api.openweathermap.org/data/2.5/forecast";
+        private const string PROXY_URL = "XXX";
+        private const string PROXY_USERNAME = "XXX";
+        private const string PROXY_PASS = "XXX";
+
+        #endregion
 
         #region constructors
 
@@ -20,8 +32,10 @@ namespace Cotecna.Calendar.Model.Forecast
 
         internal static async Task<JsonValue> GetWeatherForecast()
         {
+            //Uncomment this if in your side have a proxy       
+           //HttpClient client = WeatherForecast.BuildHttpClientWithProxy();
+
             HttpClient client = new HttpClient();
-            //HttpClient client = WeatherForecast.BuildHttpClientWithProxy();
             HttpRequestMessage request = new HttpRequestMessage()
             {
                 RequestUri = WeatherForecast.GetUri(),
@@ -53,10 +67,10 @@ namespace Cotecna.Calendar.Model.Forecast
 
         private static Uri GetUri()
         {
-            var builder = new UriBuilder("https://api.openweathermap.org/data/2.5/forecast");
+            var builder = new UriBuilder(FORECAST_URL_WEB_API);
             var query = HttpUtility.ParseQueryString(builder.Query);
-            query["q"] = "Barcelona";
-            query["appid"] = "ab00f1f217b4c97b2f2ecfab05190206";
+            query[FORECAST_URL_CITY_PARAMETER_KEY] = FORECAST_URL_CITY_PARAMETER_VALUE;
+            query[FORECAST_URL_LOGIN_PARAMETER_KEY] = FORECAST_URL_LOGIN_PARAMETER_VALUE;
             builder.Query = query.ToString();
             string url = builder.ToString();
             return new Uri(url);
@@ -66,12 +80,12 @@ namespace Cotecna.Calendar.Model.Forecast
         {
             var proxy = new WebProxy()
             {
-                Address = new Uri($"XXX"),
+                Address = new Uri(PROXY_URL),
                 UseDefaultCredentials = false,
 
                 Credentials = new NetworkCredential(
-                userName: "XXX",
-                password: "XXX")
+                userName: PROXY_USERNAME,
+                password: PROXY_PASS)
             };
 
             var httpClientHandler = new HttpClientHandler()
